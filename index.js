@@ -17,7 +17,6 @@ app.use("/url",urlRoute);
 app.get('/:ShortID',async (req,res)=>{
     console.log("route hit");
     const ShortID  = req.params.ShortID;
-    console.log(ShortID)
     const entry = await URL.findOneAndUpdate({
         ShortID
     }, { $push:{
@@ -26,7 +25,6 @@ app.get('/:ShortID',async (req,res)=>{
         } 
     }}
 )
-console.log(entry);
 res.redirect(entry.redirectUrl);
 })
 app.listen(port,()=>{
