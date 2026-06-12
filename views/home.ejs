@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Home page</title>
+</head>
+<body>
+    <h1>URL SHORTNER</h1>
+    <% if (local.id) { %>
+        <p>URL Generated: https://localhost8001/url/<%= id %></p>
+    <% } %>
+    <div>
+        <form method="post" action="/url">
+            <label>Enter Your Original URL</label>
+            <input 
+            type="text" 
+            name="url"
+            placeholder="https://example.com"
+            
+            >
+            <button type="submit">Generate</button>
+        </form>
+    </div>
+    <div>
+        
+    </div>
+    
+</body>
+</html>
