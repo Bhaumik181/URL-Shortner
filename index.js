@@ -25,7 +25,7 @@ ConnectToMongoDB(process.env.MONGO_URL).then(()=>{
 //     });
 // })
 app.use("/url",urlRoute);
-app.use("/",staticRoute);
+app.use("/",staticRoute);  
 app.get('/url/:ShortID',async (req,res)=>{
     console.log("route hit");
     const ShortID  = req.params.ShortID;
